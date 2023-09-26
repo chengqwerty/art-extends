@@ -1,0 +1,6 @@
+{
+    "lib": {
+        "flatModuleFile": "artDialog",
+        "entryFile": "public-api.ts"
+    }
+}

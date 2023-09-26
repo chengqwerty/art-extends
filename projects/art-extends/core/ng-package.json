@@ -1,0 +1,6 @@
+{
+    "lib": {
+        "flatModuleFile": "artCore",
+        "entryFile": "public-api.ts"
+    }
+}

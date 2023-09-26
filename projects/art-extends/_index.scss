@@ -1,0 +1,3 @@
+@forward './art-dialog/art-alert/alert-theme.component' as alert-* show alert-theme;
+
+@forward './core/theming/all-theme' show all-component-themes;

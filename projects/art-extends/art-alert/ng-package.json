@@ -1,0 +1,6 @@
+{
+    "lib": {
+        "flatModuleFile": "artAlert",
+        "entryFile": "public-api.ts"
+    }
+}

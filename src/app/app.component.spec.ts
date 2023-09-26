@@ -15,13 +15,13 @@ describe('AppComponent', () => {
   it(`should have as title 'art-first'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('art-first');
+    expect(app.title).toEqual('art-art-alert-first');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('art-first app is running!');
+    expect(compiled.querySelector('.content span')?.textContent).toContain('art-art-alert-first app is running!');
   });
 });

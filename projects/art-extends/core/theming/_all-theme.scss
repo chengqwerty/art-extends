@@ -1,0 +1,11 @@
+// Import all the theming functionality.
+@use '../../art-dialog/art-alert/alert-theme.component' as alert-theme;
+@use './theming';
+
+// Create a theme.
+@mixin all-component-themes($theme-or-color-config) {
+    $dedupe-key: 'angular-material-extends-theme';
+    @include theming.private-check-duplicate-theme-styles($theme-or-color-config, $dedupe-key) {
+        @include alert-theme.theme($theme-or-color-config);
+    }
+}
