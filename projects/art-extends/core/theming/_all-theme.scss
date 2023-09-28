@@ -1,5 +1,6 @@
 // Import all the theming functionality.
-@use '../../art-dialog/art-alert/alert-theme.component' as alert-theme;
+@use './art-dialog/art-alert/art-alert-theme.component' as alert-theme;
+@use './art-descriptions/art-descriptions-theme.component' as descriptions-theme;
 @use './theming';
 
 // Create a theme.
@@ -7,5 +8,6 @@
     $dedupe-key: 'angular-material-extends-theme';
     @include theming.private-check-duplicate-theme-styles($theme-or-color-config, $dedupe-key) {
         @include alert-theme.theme($theme-or-color-config);
+        @include descriptions-theme.theme($theme-or-color-config);
     }
 }

@@ -1,0 +1,28 @@
+.art-descriptions-header {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+.art-descriptions-title {
+    display: flex;
+    align-items: center;
+}
+
+.art-descriptions-view {
+    width: 100%;
+    border-radius: 4px;
+}
+
+:host .art-descriptions-view>.art-descriptions-table {
+    table-layout: auto;
+    border-collapse: collapse;
+}
+.art-descriptions-view .art-descriptions-table {
+    width: 100%;
+    table-layout: fixed;
+}
+
+.art-descriptions-item-container {
+    display: flex;
+}

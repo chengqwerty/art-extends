@@ -13,7 +13,7 @@ import { Subject } from 'rxjs';
 @Component({
     changeDetection: ChangeDetectionStrategy.OnPush,
     encapsulation: ViewEncapsulation.None,
-    selector: 'art-art-alert-descriptions-item',
+    selector: 'art-descriptions-item',
     template: `
         <ng-template>
             <ng-content></ng-content>
@@ -27,8 +27,8 @@ export class ArtDescriptionsItemComponent implements OnChanges, OnDestroy {
 
     @ViewChild(TemplateRef, {static: true}) content!: TemplateRef<void>;
 
-    @Input() nzSpan = 1;
-    @Input() nzTitle: string | TemplateRef<void> = '';
+    @Input() span = 1;
+    @Input() title: string | TemplateRef<void> = '';
 
     readonly inputChange$ = new Subject<void>();
 
