@@ -1,6 +1,6 @@
 {
     "name": "@think-make/art-extends",
-    "version": "0.0.12",
+    "version": "0.0.13",
     "exports": {
         ".": {
             "sass": "./_index.scss"
