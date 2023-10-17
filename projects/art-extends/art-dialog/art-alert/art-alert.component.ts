@@ -20,7 +20,7 @@ export class ArtAlertComponent implements OnInit {
         'art-alert-dialog-error': false
     };
 
-    constructor(public dialogRef: DialogRef<string>, @Inject(DIALOG_DATA) public data: ArtAlertDialogConfig) {
+    constructor(public dialogRef: DialogRef, @Inject(DIALOG_DATA) public data: ArtAlertDialogConfig) {
         let key = ('art-alert-dialog-' + data.type) as ('art-alert-dialog-success' | 'art-alert-dialog-warning' | 'art-alert-dialog-error');
         this.alertTypeClass[key] = true;
     }

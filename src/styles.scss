@@ -2,6 +2,7 @@
 @use '@angular/material' as mat;
 @use '../projects/art-extends/art-dialog/art-alert/art-alert-theme.component' as alert-theme;
 @use '../projects/art-extends/art-descriptions/art-descriptions-theme.component' as descriptions-theme;
+@use '../projects/art-extends/core/theming/all-theme' as all-theme;
 
 @include mat.core();
 
@@ -30,6 +31,7 @@ $app-theme: mat.define-light-theme((
 
 @include alert-theme.theme($app-theme);
 @include descriptions-theme.theme($app-theme);
+@include all-theme.all-component-themes($app-theme);
 
 :focus-visible {
     outline: none;

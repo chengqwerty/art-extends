@@ -9,6 +9,7 @@ import { ArtDescriptionsModule }             from '@think-make/art-extends/art-d
 import { MatIconModule }                     from '@angular/material/icon';
 import { ArtDialogContainerComponent }       from './art-dialog-container/art-dialog-container.component';
 import { MatButtonModule }                   from '@angular/material/button';
+import { ArtConfirmContainerComponent }      from './art-confirm-container/art-confirm-container.component';
 
 const routes: Route[] = [
     {
@@ -18,6 +19,10 @@ const routes: Route[] = [
     {
         path: 'dialog',
         component: ArtDialogContainerComponent
+    },
+    {
+        path: 'confirm',
+        component: ArtConfirmContainerComponent
     }
 ];
 
@@ -25,7 +30,8 @@ const routes: Route[] = [
     declarations: [
         AppComponent,
         ArtDescriptionsContainerComponent,
-        ArtDialogContainerComponent
+        ArtDialogContainerComponent,
+        ArtConfirmContainerComponent
     ],
     imports: [
         BrowserModule,
