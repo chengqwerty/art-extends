@@ -1,10 +1,12 @@
-import { Component } from '@angular/core';
+import { Component }        from '@angular/core';
 import { ArtDialogService } from '@think-make/art-extends/art-dialog';
+import { Theme }            from '@think-make/art-extends/core';
 
 @Component({
-  selector: 'app-art-dialog-container',
-  templateUrl: './art-dialog-container.component.html',
-  styleUrls: ['./art-dialog-container.component.scss']
+    selector: 'app-art-dialog-container',
+    standalone: false,
+    templateUrl: './art-dialog-container.component.html',
+    styleUrls: ['./art-dialog-container.component.scss']
 })
 export class ArtDialogContainerComponent {
 
@@ -12,10 +14,8 @@ export class ArtDialogContainerComponent {
 
     }
 
-    openDialog() {
-        this.dialog.success("success", {
-            duration: 2000000
-        });
+    openDialog(type: Theme) {
+        this.dialog.alert(type, type, {duration: 2000});
     }
 
 }

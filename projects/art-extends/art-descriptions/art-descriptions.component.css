@@ -1,0 +1,49 @@
+.art-descriptions-header {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.art-descriptions-title {
+  display: flex;
+  align-items: center;
+}
+
+.art-descriptions-view {
+  width: 100%;
+  border-radius: 4px;
+}
+
+:host .art-descriptions-view > .art-descriptions-table {
+  table-layout: auto;
+  border-collapse: collapse;
+}
+
+.art-descriptions-view .art-descriptions-table {
+  width: 100%;
+  table-layout: fixed;
+}
+
+.art-descriptions-item-container {
+  display: flex;
+}
+
+:host.art-descriptions-bordered .art-descriptions-view {
+  border: 1px solid var(--mat-sys-outline);
+}
+:host.art-descriptions-bordered .art-descriptions-row {
+  border-bottom: 1px solid var(--mat-sys-outline);
+}
+:host.art-descriptions-bordered .art-descriptions-item-label {
+  background-color: var(--mat-sys-outline-variant);
+}
+:host.art-descriptions-bordered .art-descriptions-item-label, :host.art-descriptions-bordered .art-descriptions-item-content {
+  padding: 16px 24px;
+  border-right: 1px solid var(--mat-sys-outline);
+}
+
+.art-descriptions-row > th, .art-descriptions-row > td {
+  padding-bottom: 16px;
+}
+
+/*# sourceMappingURL=art-descriptions.component.css.map */

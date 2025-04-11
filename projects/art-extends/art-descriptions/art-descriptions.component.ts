@@ -21,6 +21,7 @@ export interface ArtDescriptionsItemRenderProps {
 @Component({
     changeDetection: ChangeDetectionStrategy.OnPush,
     selector: 'art-descriptions',
+    standalone: false,
     template: `
         <div *ngIf="title || extra" class="art-descriptions-header">
             <div *ngIf="title" class="art-descriptions-title">

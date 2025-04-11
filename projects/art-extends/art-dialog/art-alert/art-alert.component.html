@@ -1,5 +1,7 @@
 <div class="art-alert-dialog-container">
-    <h4 [class]="alertTypeClass">{{data.type}}</h4>
+    <h4 [class]="theme"><span>{{data.type}}</span>
+        <mat-icon fontIcon="close" (click)="close()"></mat-icon>
+    </h4>
     <p class="art-modal-dialog-content">
         {{data.message}}
     </p>

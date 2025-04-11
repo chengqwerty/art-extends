@@ -4,6 +4,7 @@ import { GlobalPositionStrategy }                      from '@angular/cdk/overla
 import { ArtAlertDialogConfig, ArtAlertComponent }     from './art-alert/art-alert.component';
 import { ArtConfirmComponent, ArtConfirmDialogConfig } from './art-confirm/art-confirm.component';
 import { MatDialog, MatDialogRef }                     from '@angular/material/dialog';
+import { Theme }                                       from '@think-make/art-extends/core';
 
 @Injectable()
 export class ArtDialogService {
@@ -11,7 +12,7 @@ export class ArtDialogService {
     constructor(public dialog: Dialog, public matDialog: MatDialog) {
     }
 
-    public alert(type: 'success' | 'error' | 'warning', message: string, config?: ArtAlertDialogConfig): void {
+    public alert(type: Theme, message: string, config?: ArtAlertDialogConfig): void {
         const positionStrategy = new GlobalPositionStrategy();
         positionStrategy.right('24px');
         positionStrategy.top('32px');
@@ -26,8 +27,12 @@ export class ArtDialogService {
         }, duration);
     }
 
+    public primary(message: string, config?: ArtAlertDialogConfig) {
+        this.alert('primary', message, config);
+    }
+
     public success(message: string, config?: ArtAlertDialogConfig) {
-        this.alert('success', message, config);
+        this.alert('primary', message, config);
     }
 
     public warning(message: string, config?: ArtAlertDialogConfig) {
@@ -35,12 +40,12 @@ export class ArtDialogService {
     }
 
     public error(message: string, config?: ArtAlertDialogConfig) {
-        this.alert('warning', message, config);
+        this.alert('error', message, config);
     }
 
     public confirm(header: string, message: string, config?: ArtConfirmDialogConfig): MatDialogRef<ArtConfirmComponent> {
         return this.matDialog.open(ArtConfirmComponent, {
-            data: Object.assign({type: 'primary'}, config, {header: header, message: message})
+            data: Object.assign({type: 'primary'}, config, {header: header, message: message}),
         });
     }
 

@@ -1,1 +1,8 @@
-<button mat-raised-button (click)="openDialog()">alert</button>
+<div class="flex-row justify-center" style="gap: 24px;">
+    <button mat-stroked-button (click)="openDialog('primary')">alert success</button>
+    <button class="accent" mat-raised-button (click)="openDialog('warning')">alert warning</button>
+    <button class="warning" mat-raised-button (click)="openDialog('warning')">alert warning</button>
+    <button class="error" mat-raised-button color="filled-container-color" (click)="openDialog('error')">alert error</button>
+</div>
+
+

@@ -13,6 +13,7 @@ import { Subject } from 'rxjs';
 @Component({
     changeDetection: ChangeDetectionStrategy.OnPush,
     encapsulation: ViewEncapsulation.None,
+    standalone: false,
     selector: 'art-descriptions-item',
     template: `
         <ng-template>

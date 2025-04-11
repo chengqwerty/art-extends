@@ -5,7 +5,8 @@ import { MatDialogModule }     from '@angular/material/dialog';
 
 import { ArtDialogService }    from './art-dialog.service';
 import { ArtAlertComponent }   from './art-alert/art-alert.component';
-import { ArtConfirmComponent } from './art-confirm/art-confirm.component';
+import { ArtConfirmComponent }    from './art-confirm/art-confirm.component';
+import { MatIconModule } from '@angular/material/icon';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { ArtConfirmComponent } from './art-confirm/art-confirm.component';
     ],
     imports: [
         MatDialogModule,
-        MatButtonModule
+        MatButtonModule,
+        MatIconModule
     ],
     providers: [
         ArtDialogService

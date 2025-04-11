@@ -1,8 +1,8 @@
-<h4 mat-dialog-title [class]="colorClass">{{data.header}}</h4>
+<h4 mat-dialog-title [class]="theme">{{data.header}}</h4>
 <div mat-dialog-content>
     {{data.message}}
 </div>
 <div mat-dialog-actions [align]="'end'">
-    <button mat-button mat-dialog-close>取 消</button>
-    <button mat-button [color]="data.type" mat-dialog-close cdkFocusInitial (click)="confirm()">确 认</button>
+    <button class="accent" mat-button [mat-dialog-close]="false">取 消</button>
+    <button mat-button [color]="data.type" [mat-dialog-close]="true" cdkFocusInitial>确 认</button>
 </div>

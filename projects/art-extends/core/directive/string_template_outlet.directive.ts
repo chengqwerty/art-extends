@@ -18,6 +18,7 @@ export type ArtSafeAny = any;
 
 @Directive({
     selector: '[artStringTemplateOutlet]',
+    standalone: false,
     exportAs: 'artStringTemplateOutlet'
 })
 export class ArtStringTemplateOutletDirective<_T = unknown> implements OnChanges {

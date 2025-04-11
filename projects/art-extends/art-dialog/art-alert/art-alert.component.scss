@@ -1,12 +1,22 @@
 .art-alert-dialog-container {
     padding: 16px;
     border-radius: 4px;
+    background-color: var(--mat-sys-background);
+    border: 1px solid var(--mat-sys-outline);
+    box-shadow: 8px 8px 8px var(--mat-sys-outline-variant);
     & h4 {
         margin: 8px 0;
+        display: flex;
+        justify-content: space-between;
     }
 }
+
 .art-modal-dialog-content {
     min-width: 360px;
     overflow-wrap: break-word;
     text-indent: 2em;
+}
+
+h4 {
+    color: var(--mat-sys-primary);
 }

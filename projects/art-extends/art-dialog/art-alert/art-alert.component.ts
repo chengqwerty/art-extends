@@ -9,23 +9,29 @@ export interface ArtAlertDialogConfig {
 
 @Component({
     selector: 'art-alert',
+    standalone: false,
     templateUrl: './art-alert.component.html',
     styleUrls: ['./art-alert.component.scss']
 })
 export class ArtAlertComponent implements OnInit {
 
-    public alertTypeClass = {
-        'art-alert-dialog-success': false,
-        'art-alert-dialog-warning': false,
-        'art-alert-dialog-error': false
+    public theme = {
+        'primary': false,
+        'accent': false,
+        'warning': false,
+        'error': false
     };
 
     constructor(public dialogRef: DialogRef, @Inject(DIALOG_DATA) public data: ArtAlertDialogConfig) {
-        let key = ('art-alert-dialog-' + data.type) as ('art-alert-dialog-success' | 'art-alert-dialog-warning' | 'art-alert-dialog-error');
-        this.alertTypeClass[key] = true;
+        let key = data.type as ('primary' | 'accent' | 'warning' | 'error');
+        this.theme[key] = true;
     }
 
     ngOnInit(): void {
+    }
+
+    close() {
+        this.dialogRef.close();
     }
 
 }
